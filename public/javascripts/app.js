@@ -18,7 +18,8 @@ function updatecart(data){
     }
 
 
-    fetch(url,params).then(response=>response.json())
+    fetch(url,params).then(response=>response.json(),
+    cartCounter.innerText = res.data.totalQty)
     .then(data=>{console.log(data)})
 
 }
